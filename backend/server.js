@@ -22,6 +22,10 @@ app.use('/api/entries', entryRoutes);
 
 app.use('/api/resources', require('./routes/resources'));
 
+app.get('/', (req, res) => {
+  res.send('Mind Space API is running. Use /api/entries or /api/resources.');
+});
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
